@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center">
+
+    <!-- Title for the game -->
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tic Tac Toe"
+        android:textSize="24sp"
+        android:layout_marginBottom="16dp"
+        android:textAlignment="center"/>
+
+    <!-- GridLayout for Tic Tac Toe board (3x3) -->
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:columnCount="3"
+        android:orientation="horizontal"
+        android:layout_marginBottom="32dp">
+
+        <!-- Tic Tac Toe Buttons (9 buttons for the 3x3 grid) -->
+        <Button
+            android:id="@+id/button00"
+            style="@style/TicTacToeButton"
+            android:layout_margin="4dp"
+            android:background="@drawable/border_button" />
+
+        <Button
+            android:id="@+id/button01"
+            style="@style/TicTacToeButton"
+            android:layout_margin="4dp"
+            android:background="@drawable/border_button" />
+
+        <Button
+            android:id="@+id/button02"
+            style="@style/TicTacToeButton"
+            android:layout_margin="4dp"
+            android:background="@drawable/border_button" />
+
+        <Button
+            android:id="@+id/button10"
+            style="@style/TicTacToeButton"
+            android:layout_margin="4dp"
+            android:background="@drawable/border_button" />
+
+        <Button
+            android:id="@+id/button11"
+            style="@style/TicTacToeButton"
+            android:layout_margin="4dp"
+            android:background="@drawable/border_button" />
+
+        <Button
+            android:id="@+id/button12"
+            style="@style/TicTacToeButton"
+            android:layout_margin="4dp"
+            android:background="@drawable/border_button" />
+
+        <Button
+            android:id="@+id/button20"
+            style="@style/TicTacToeButton"
+            android:layout_margin="4dp"
+            android:background="@drawable/border_button" />
+
+        <Button
+            android:id="@+id/button21"
+            style="@style/TicTacToeButton"
+            android:layout_margin="4dp"
+            android:background="@drawable/border_button" />
+
+        <Button
+            android:id="@+id/button22"
+            style="@style/TicTacToeButton"
+            android:layout_margin="4dp"
+            android:background="@drawable/border_button" />
+
+    </GridLayout>
+
+    <!-- TextView to show the current player (X or O) -->
+    <TextView
+        android:id="@+id/currentPlayerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current Player: X"
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp"
+        android:textAlignment="center"/>
+
+    <!-- Button to restart the game -->
+    <Button
+        android:id="@+id/playAgainButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Play Again"
+        android:textSize="18sp"
+        android:visibility="gone"
+        android:layout_gravity="center"/>
+
+</LinearLayout>
