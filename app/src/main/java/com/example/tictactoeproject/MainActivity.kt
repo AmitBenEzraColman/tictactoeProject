@@ -1,4 +1,4 @@
-package com.example.tictactoe
+package com.example.tictactoeproject
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -9,7 +9,6 @@ import android.widget.TextView
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
-import com.example.tictactoeproject.R
 import com.example.tictactoeproject.viewModel.GameViewModel
 
 class MainActivity : AppCompatActivity() {
@@ -25,12 +24,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Initialize UI elements
+
         currentPlayerTextView = findViewById(R.id.currentPlayerTextView)
         playAgainButton = findViewById(R.id.playAgainButton)
         gridLayout = findViewById(R.id.gridLayout)
 
+
         setUpBoard()
+
 
         gameViewModel.currentPlayer.observe(this, Observer { player ->
             currentPlayerTextView.text = "Current Player: $player"
@@ -46,6 +47,7 @@ class MainActivity : AppCompatActivity() {
             }
         })
 
+
         playAgainButton.setOnClickListener {
             gameViewModel.resetGame()
             playAgainButton.visibility = View.GONE
@@ -54,6 +56,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setUpBoard() {
+
         for (row in 0..2) {
             for (col in 0..2) {
                 val buttonId = resources.getIdentifier("button$row$col", "id", packageName)
@@ -72,6 +75,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun updateBoard() {
+
         for (row in 0..2) {
             for (col in 0..2) {
                 val buttonId = resources.getIdentifier("button$row$col", "id", packageName)
